@@ -1,100 +1,240 @@
 
 import React from 'react';
+import { Menu, X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 import { useLocation } from 'react-router-dom';
-import { SidebarTrigger } from "@/components/ui/sidebar";
 
-export const Header = () => {
+interface HeaderProps {
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: (open: boolean) => void;
+}
+
+export const Header = ({ isSidebarOpen, setIsSidebarOpen }: HeaderProps) => {
   const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      // If not on homepage, navigate to homepage first
-      window.location.href = `/#${sectionId}`;
-    } else {
-      // If on homepage, scroll to section
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
-  const scrollToPageSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const getNavigationItems = () => {
+  const scrollToContact = () => {
+    window.location.href = '/#contact';
+  };
+
+  const getNavigationButtons = () => {
     switch (location.pathname) {
       case '/printers':
-        return [
-          { label: 'Services', action: () => scrollToPageSection('services') },
-          { label: 'Types', action: () => scrollToPageSection('printer-types') },
-          { label: 'Brands', action: () => scrollToPageSection('brands') },
-          { label: 'FAQs', action: () => scrollToPageSection('faqs') }
-        ];
+        return (
+          <>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Services
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('types')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Types
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('brands')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Brands
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('faqs')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              FAQs
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={scrollToContact}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Contact
+            </Button>
+          </>
+        );
+      
       case '/cctv':
-        return [
-          { label: 'Services', action: () => scrollToPageSection('services') },
-          { label: 'Types', action: () => scrollToPageSection('cctv-types') },
-          { label: 'FAQs', action: () => scrollToPageSection('faqs') },
-          { label: 'Contact', action: () => scrollToSection('contact') }
-        ];
+        return (
+          <>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Services
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('types')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Types
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('brands')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Brands
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('faqs')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              FAQs
+            </Button>
+          </>
+        );
+      
       case '/door-locks':
-        return [
-          { label: 'Services', action: () => scrollToPageSection('services') },
-          { label: 'Types', action: () => scrollToPageSection('lock-types') },
-          { label: 'Brands', action: () => scrollToPageSection('brands') },
-          { label: 'FAQs', action: () => scrollToPageSection('faqs') }
-        ];
+        return (
+          <>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Services
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('types')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Types
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('brands')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Brands
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('faqs')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              FAQs
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={scrollToContact}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Contact
+            </Button>
+          </>
+        );
+      
       case '/fire-alarms':
-        return [
-          { label: 'Services', action: () => scrollToPageSection('services') },
-          { label: 'Types', action: () => scrollToPageSection('alarm-types') },
-          { label: 'Brands', action: () => scrollToPageSection('brands') },
-          { label: 'FAQs', action: () => scrollToPageSection('faqs') }
-        ];
-      case '/feedback':
-        return [
-          { label: 'Overview', action: () => scrollToPageSection('overview') },
-          { label: 'Testimonials', action: () => scrollToPageSection('testimonials') },
-          { label: 'Submit', action: () => scrollToPageSection('submit') }
-        ];
+        return (
+          <>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Services
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('types')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Types
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('brands')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Brands
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('faqs')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              FAQs
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={scrollToContact}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Contact
+            </Button>
+          </>
+        );
+      
       default:
-        return [
-          { label: 'About', action: () => scrollToSection('about') },
-          { label: 'Services', action: () => scrollToSection('services') },
-          { label: 'Contact', action: () => scrollToSection('contact') },
-          { label: 'Blogs / FAQs', action: () => scrollToSection('blogs') }
-        ];
+        return (
+          <>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('about')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              About
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Services
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('contact')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Contact
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('blogs')}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Blogs / FAQs
+            </Button>
+          </>
+        );
     }
   };
 
-  const navigationItems = getNavigationItems();
-
   return (
-    <header className="sticky top-0 z-50 bg-white border-b shadow-sm">
+    <header className="bg-white shadow-sm border-b sticky top-0 z-40">
       <div className="flex items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-4">
-          <SidebarTrigger className="md:hidden" />
-          <div>
-            <h1 className="text-2xl font-bold text-blue-600">iTOP Services</h1>
-            <p className="text-sm text-gray-600">Your One-Stop Tech Security & Print Solution</p>
-          </div>
+        <div className="flex items-center">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="lg:hidden"
+          >
+            {isSidebarOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+          <h1 className="text-xl font-bold text-gray-800 ml-2">iTOP Services</h1>
         </div>
         
-        <nav className="hidden md:flex items-center gap-6">
-          {navigationItems.map((item, index) => (
-            <button 
-              key={index}
-              onClick={item.action}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              {item.label}
-            </button>
-          ))}
+        <nav className="hidden md:flex items-center space-x-6">
+          {getNavigationButtons()}
         </nav>
       </div>
     </header>
