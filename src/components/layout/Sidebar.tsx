@@ -49,6 +49,19 @@ export const Sidebar = () => {
     navigate(path);
   };
 
+  const handleServiceNavigation = (path: string, sectionId?: string) => {
+    navigate(path);
+    if (sectionId) {
+      // Small delay to ensure page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   const openMap = () => {
     window.open('https://maps.google.com/?q=224, B1, DDA Flats, Loknayak Puram, New Delhi 110041', '_blank');
   };
@@ -72,25 +85,25 @@ export const Sidebar = () => {
                   <CollapsibleContent>
                     <SidebarMenuSub>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/printers')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/printers', 'services')}>
                           <Printer className="h-4 w-4" />
                           Printers
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/door-locks')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/door-locks', 'services')}>
                           <Shield className="h-4 w-4" />
                           Door Locks
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/cctv')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/cctv', 'services')}>
                           <Eye className="h-4 w-4" />
                           CCTV
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/fire-alarms')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/fire-alarms', 'services')}>
                           <Flame className="h-4 w-4" />
                           Fire Alarms
                         </SidebarMenuSubButton>
@@ -121,11 +134,11 @@ export const Sidebar = () => {
                           </CollapsibleTrigger>
                           <CollapsibleContent>
                             <div className="ml-4 space-y-1">
-                              <div className="text-xs text-gray-600 px-2 py-1">HP</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Canon</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Brother</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Samsung</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Others (Xerox, Ricoh)</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>HP</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Canon</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Brother</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Samsung</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Others (Xerox, Ricoh)</div>
                             </div>
                           </CollapsibleContent>
                         </SidebarMenuSubItem>
@@ -140,10 +153,10 @@ export const Sidebar = () => {
                           </CollapsibleTrigger>
                           <CollapsibleContent>
                             <div className="ml-4 space-y-1">
-                              <div className="text-xs text-gray-600 px-2 py-1">HP</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Canon</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Epson</div>
-                              <div className="text-xs text-gray-600 px-2 py-1">Others</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>HP</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Canon</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Epson</div>
+                              <div className="text-xs text-gray-600 px-2 py-1 cursor-pointer hover:bg-gray-200 rounded" onClick={() => handleServiceNavigation('/printers', 'services')}>Others</div>
                             </div>
                           </CollapsibleContent>
                         </SidebarMenuSubItem>
@@ -165,25 +178,25 @@ export const Sidebar = () => {
                   <CollapsibleContent>
                     <SidebarMenuSub>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/printers')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/printers', 'services')}>
                           <Printer className="h-4 w-4" />
                           Printers
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/cctv')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/cctv', 'services')}>
                           <Eye className="h-4 w-4" />
                           CCTV
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/door-locks')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/door-locks', 'services')}>
                           <Shield className="h-4 w-4" />
                           Door Locks
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton onClick={() => handleNavigation('/fire-alarms')}>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/fire-alarms', 'services')}>
                           <Flame className="h-4 w-4" />
                           Fire Alarms
                         </SidebarMenuSubButton>
@@ -205,22 +218,22 @@ export const Sidebar = () => {
                   <CollapsibleContent>
                     <SidebarMenuSub>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/printers', 'services')}>
                           <span>Preventive Maintenance</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/cctv', 'services')}>
                           <span>Firmware/Software Updates</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/door-locks', 'services')}>
                           <span>On-site Support</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/fire-alarms', 'services')}>
                           <span>Priority Service</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
@@ -241,32 +254,32 @@ export const Sidebar = () => {
                   <CollapsibleContent>
                     <SidebarMenuSub>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/', 'services')}>
                           <span>System Configuration & Setup</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/', 'services')}>
                           <span>Firmware Updates</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/', 'services')}>
                           <span>Device Health Checks</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/', 'services')}>
                           <span>Software/App Integration</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/', 'services')}>
                           <span>Remote Troubleshooting</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton onClick={() => handleServiceNavigation('/', 'services')}>
                           <span>Staff/User Training & Demos</span>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
