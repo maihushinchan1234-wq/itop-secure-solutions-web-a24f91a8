@@ -37,6 +37,14 @@ export const BlogsSection = () => {
     navigate(`/blog/${blogId}`);
   };
 
+  const handleViewAllClick = () => {
+    // Navigate to feedback page and scroll to top
+    navigate('/feedback');
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
+
   return (
     <section id="blogs" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -92,10 +100,10 @@ export const BlogsSection = () => {
 
         <div className="text-center mt-12">
           <button 
-            onClick={() => navigate('/feedback')}
+            onClick={handleViewAllClick}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            View All Articles & FAQs
+            View Testimonials & Feedback
           </button>
         </div>
       </div>
