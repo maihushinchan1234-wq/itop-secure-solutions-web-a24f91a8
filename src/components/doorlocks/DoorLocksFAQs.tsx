@@ -35,6 +35,22 @@ export const DoorLocksFAQs = () => {
     {
       question: "How long do smart lock batteries last?",
       answer: "Most smart lock batteries last 6-12 months depending on usage. You'll receive low battery notifications well in advance through the mobile app."
+    },
+    {
+      question: "Do smart locks work with all door types?",
+      answer: "Smart locks are compatible with most standard doors including wooden, metal, and composite doors. Our technicians assess door compatibility during the free consultation to ensure proper fit and functionality."
+    },
+    {
+      question: "Can I still use a regular key with a smart lock?",
+      answer: "Many smart locks offer traditional key backup options alongside digital access methods. This provides peace of mind and ensures you're never locked out, even if the electronic components fail."
+    },
+    {
+      question: "How do I manage access for guests or service providers?",
+      answer: "Smart locks allow you to create temporary access codes that can be set to expire after a specific time or number of uses. You can also grant and revoke access remotely through the mobile app."
+    },
+    {
+      question: "What maintenance do smart locks require?",
+      answer: "Smart locks require minimal maintenance - mainly battery replacement every 6-12 months and occasional cleaning of the keypad or fingerprint sensor. Our service team provides annual maintenance checks to ensure optimal performance."
     }
   ];
 
@@ -45,46 +61,99 @@ export const DoorLocksFAQs = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Door Lock FAQs
           </h2>
-          <p className="text-lg text-gray-600">
-            Common questions about smart locks and door security solutions
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Get answers to the most common questions about smart door locks, installation process, 
+            security features, and ongoing maintenance. Our expert team has compiled these insights 
+            from years of experience helping customers upgrade their home security.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="max-w-4xl mx-auto mb-12">
+          <Accordion type="single" collapsible className="space-y-6">
             {doorLockFaqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg">
+              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                  <span className="font-semibold text-gray-800 text-left leading-relaxed">{faq.question}</span>
+                  <span className="font-semibold text-gray-800 text-left leading-relaxed pr-4">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 pt-0">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <AccordionContent className="px-6 pb-6 pt-2">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
 
-        <div className="mt-12 text-center">
+        {/* Enhanced Service Benefits Section */}
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 mb-8">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              Why Choose Professional Smart Lock Installation?
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-blue-800 mb-4">Expert Assessment & Recommendation</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-sm">Free door compatibility evaluation at your location</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-sm">Personalized smart lock recommendations based on your needs</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-sm">Security level assessment and upgrade suggestions</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-green-700 mb-4">Professional Installation & Setup</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-sm">Precise alignment and secure mounting for optimal performance</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-sm">Complete mobile app configuration and user training</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-sm">6-month service warranty with ongoing technical support</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="text-center">
           <div className="bg-blue-50 rounded-lg p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Need Smart Lock Installation?
+              Ready to Upgrade Your Home Security?
             </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Our certified technicians provide professional installation and setup for all smart lock brands.
+            <p className="text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
+              Join thousands of satisfied customers who have upgraded to smart locks. Our certified technicians 
+              provide professional installation and setup for all smart lock brands with comprehensive warranty coverage.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button 
                 onClick={() => window.location.href = '/#contact'}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
               >
-                Get Quote
+                Get Free Consultation
               </button>
               <button 
                 onClick={() => window.open('https://wa.me/919990820830', '_blank')}
-                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold"
               >
-                WhatsApp Us
+                WhatsApp Us Now
               </button>
             </div>
           </div>

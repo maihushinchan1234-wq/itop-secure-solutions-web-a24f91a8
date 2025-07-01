@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,185 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Blog Content Styling - Fix Overlapping Issues */
+.blog-content {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  clear: both;
+  position: relative;
+}
+
+.blog-content h1 {
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h4 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  position: relative;
+  clear: both;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  clear: both;
+}
+
+.blog-content li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+.blog-content .flex {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  position: relative;
+  clear: both;
+}
+
+.blog-content .grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  clear: both;
+}
+
+.blog-content .space-y-1 > * + * {
+  margin-top: 0.25rem;
+}
+
+.blog-content .space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.blog-content .space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.blog-content .space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.blog-content .space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.blog-content .space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+/* Fix for overlapping divs and containers */
+.blog-content > div {
+  position: relative;
+  clear: both;
+  margin-bottom: 2rem;
+}
+
+.blog-content .bg-gradient-to-r,
+.blog-content .bg-green-50,
+.blog-content .bg-blue-50,
+.blog-content .bg-yellow-50,
+.blog-content .bg-red-50,
+.blog-content .bg-purple-50,
+.blog-content .bg-orange-50,
+.blog-content .bg-white {
+  position: relative;
+  clear: both;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* Ensure icons don't overlap text */
+.blog-content .flex-shrink-0 {
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+
+/* Fix for text alignment and spacing */
+.blog-content .text-left {
+  text-align: left;
+}
+
+.blog-content .leading-relaxed {
+  line-height: 1.75;
+}
+
+/* Prevent absolute positioning issues */
+.blog-content * {
+  position: relative;
+}
+
+.blog-content .absolute {
+  position: absolute;
+}
+
+.blog-content .relative {
+  position: relative;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .blog-content {
+    font-size: 14px;
+  }
+  
+  .blog-content h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .blog-content .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blog-content .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
