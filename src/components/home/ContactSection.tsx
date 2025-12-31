@@ -2,8 +2,11 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Shield, Zap } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useContactContent } from '@/hooks/useCMSContent';
 
 export const ContactSection = () => {
+  const { content, isLoading } = useContactContent();
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden border-t-4 border-blue-500">
       {/* Background decoration */}
@@ -14,16 +17,15 @@ export const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-            🚀 Get Expert Help Now
+            {content.subtitle}
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Contact iTOP Services
+              {content.title}
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your tech experience? Our certified experts are standing by to provide 
-            immediate assistance, professional consultations, and comprehensive solutions tailored to your needs.
+            {content.description}
           </p>
         </div>
 
@@ -59,12 +61,15 @@ export const ContactSection = () => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Call for Immediate Help</h3>
                     <p className="text-gray-600 mb-3">Speak directly with our technical experts</p>
                     <div className="space-y-1">
-                      <a href="tel:+919876543210" className="block text-xl font-bold text-green-600 hover:text-green-700">
-                        +91 98765 43210
-                      </a>
-                      <a href="tel:+919123456789" className="block text-lg text-gray-700 hover:text-green-600">
-                        +91 91234 56789
-                      </a>
+                      {content.phones.map((phone, index) => (
+                        <a 
+                          key={index}
+                          href={`tel:${phone.replace(/\s/g, '')}`} 
+                          className={`block ${index === 0 ? 'text-xl font-bold text-green-600 hover:text-green-700' : 'text-lg text-gray-700 hover:text-green-600'}`}
+                        >
+                          {phone}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -79,7 +84,7 @@ export const ContactSection = () => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">WhatsApp Support</h3>
                     <p className="text-gray-600 mb-3">Quick responses, photos, and instant quotes</p>
                     <a 
-                      href="https://wa.me/919876543210?text=Hi, I need help with my tech services" 
+                      href={`https://wa.me/${content.whatsappNumber}?text=Hi, I need help with my tech services`} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
@@ -99,8 +104,8 @@ export const ContactSection = () => {
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Email Us</h3>
                     <p className="text-gray-600 mb-3">Detailed inquiries and service requests</p>
-                    <a href="mailto:info@itopservices.com" className="text-lg font-semibold text-purple-600 hover:text-purple-700">
-                      info@itopservices.com
+                    <a href={`mailto:${content.email}`} className="text-lg font-semibold text-purple-600 hover:text-purple-700">
+                      {content.email}
                     </a>
                   </div>
                 </div>
@@ -115,12 +120,12 @@ export const ContactSection = () => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Visit Our Office</h3>
                     <p className="text-gray-600 mb-3">In-person consultations and device drop-off</p>
                     <address className="text-gray-700 not-italic mb-3">
-                      224, B1, DDA Flats<br />
-                      Loknayak Puram<br />
-                      New Delhi 110041
+                      {content.address.line1}<br />
+                      {content.address.line2}<br />
+                      {content.address.city}
                     </address>
                     <Button 
-                      onClick={() => window.open('https://maps.google.com/?q=224, B1, DDA Flats, Loknayak Puram, New Delhi 110041', '_blank')}
+                      onClick={() => window.open(`https://maps.google.com/?q=${content.address.line1}, ${content.address.line2}, ${content.address.city}`, '_blank')}
                       variant="outline"
                       className="border-red-300 text-red-600 hover:bg-red-50"
                     >
@@ -147,15 +152,15 @@ export const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg border border-green-200">
                   <span className="font-medium text-gray-700">Monday - Saturday</span>
-                  <span className="font-bold text-green-600">9:00 AM - 8:00 PM</span>
+                  <span className="font-bold text-green-600">{content.serviceHours.weekdays}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border border-blue-200">
                   <span className="font-medium text-gray-700">Sunday</span>
-                  <span className="font-bold text-blue-600">10:00 AM - 6:00 PM</span>
+                  <span className="font-bold text-blue-600">{content.serviceHours.weekends}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg border border-orange-200">
                   <span className="font-medium text-gray-700">Emergency Support</span>
-                  <span className="font-bold text-orange-600">Available on Call</span>
+                  <span className="font-bold text-orange-600">{content.serviceHours.emergency}</span>
                 </div>
               </div>
             </div>
@@ -164,11 +169,7 @@ export const ContactSection = () => {
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Service Coverage Areas</h3>
               <div className="grid grid-cols-2 gap-3">
-                {[
-                  'Central Delhi', 'South Delhi', 'North Delhi', 'East Delhi',
-                  'West Delhi', 'Gurgaon', 'Noida', 'Faridabad',
-                  'Ghaziabad', 'Greater Noida', 'Dwarka', 'Rohini'
-                ].map((area) => (
+                {content.serviceAreas.map((area) => (
                   <div key={area} className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     <span className="text-sm text-gray-700">{area}</span>
@@ -176,7 +177,7 @@ export const ContactSection = () => {
                 ))}
               </div>
               <p className="text-sm text-gray-600 mt-4 text-center">
-                Don't see your area? <a href="tel:+919876543210" className="text-blue-600 hover:underline">Call us</a> - we might still be able to help!
+                Don't see your area? <a href={`tel:${content.phones[0]?.replace(/\s/g, '')}`} className="text-blue-600 hover:underline">Call us</a> - we might still be able to help!
               </p>
             </div>
           </div>
@@ -192,14 +193,14 @@ export const ContactSection = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="tel:+919876543210"
+                href={`tel:${content.phones[0]?.replace(/\s/g, '')}`}
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
               >
                 <Phone className="h-4 w-4" />
                 Call Now
               </a>
               <a 
-                href="https://wa.me/919876543210?text=Hi, I need help with my tech services"
+                href={`https://wa.me/${content.whatsappNumber}?text=Hi, I need help with my tech services`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center gap-2"
