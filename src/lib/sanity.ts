@@ -3,8 +3,8 @@ import { createClient } from '@sanity/client';
 // Sanity client configuration
 // Replace these with your actual Sanity project credentials
 export const sanityClient = createClient({
-  projectId: import.meta.env.VITE_SANITY_PROJECT_ID || 'your-project-id',
-  dataset: import.meta.env.VITE_SANITY_DATASET || 'production',
+  projectId: 'idz300r2',
+  dataset: 'production',
   apiVersion: '2024-01-01',
   useCdn: true, // Use CDN for faster reads
 });
