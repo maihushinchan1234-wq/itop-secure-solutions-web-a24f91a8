@@ -704,12 +704,12 @@ export function usePageIndustries(pageType: string) {
       sectionTitle: "Installation Suggestions by Property Type",
       sectionDescription: "Customized surveillance solutions for every sector",
       industries: [
-        { icon: "Home", title: "Residential", description: "Home security cameras for entrances, gardens, and interior monitoring" },
-        { icon: "Building", title: "Commercial", description: "Office surveillance, parking lots, and business premise security" },
-        { icon: "School", title: "Educational", description: "School and college campus security with comprehensive coverage" },
-        { icon: "Hotel", title: "Hospitality", description: "Hotel lobby, corridor, and facility monitoring systems" },
-        { icon: "Factory", title: "Industrial", description: "Factory floor monitoring, perimeter security, and safety compliance" },
-        { icon: "ShoppingBag", title: "Retail", description: "Store surveillance, theft prevention, and customer behavior analysis" }
+        { icon: "Home", title: "Residential", description: "Home security cameras for entrances, gardens, and interior monitoring", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Building", title: "Commercial", description: "Office surveillance, parking lots, and business premise security", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "School", title: "Educational", description: "School and college campus security with comprehensive coverage", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Hotel", title: "Hospitality", description: "Hotel lobby, corridor, and facility monitoring systems" , image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" },
+        { icon: "Factory", title: "Industrial", description: "Factory floor monitoring, perimeter security, and safety compliance" , image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" },
+        { icon: "ShoppingBag", title: "Retail", description: "Store surveillance, theft prevention, and customer behavior analysis" , image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" }
       ]
     },
     printers: {
