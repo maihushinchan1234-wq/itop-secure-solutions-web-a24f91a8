@@ -23,7 +23,7 @@ export const DoorLocksTypes = () => {
               <img 
                 src={type.image} 
                 alt={type.title}
-                className="w-full object-contain"
+                className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
