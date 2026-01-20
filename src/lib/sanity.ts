@@ -112,6 +112,19 @@ export const queries = {
     category
   }`,
   
+  // Individual blog post by ID
+  blogPost: (blogId: string) => `*[_type == "blogPost" && id == "${blogId}"][0]{
+    id,
+    title,
+    excerpt,
+    htmlContent,
+    author,
+    date,
+    category,
+    readTime,
+    "image": image.asset->url
+  }`,
+  
   blogsSection: `*[_type == "blogsSection"][0]{
     sectionTitle,
     sectionDescription,

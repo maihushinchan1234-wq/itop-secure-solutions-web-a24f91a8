@@ -11,20 +11,18 @@
 
 ## Blog Post Management in Sanity
 
-### Current System Overview
+### ✅ System is Now Connected!
 
-Currently, individual blog posts (the full article content) are stored in the code file `src/pages/BlogPost.tsx`. To make them editable from Sanity, you need to:
-
-1. Create a blog post schema in Sanity Studio
-2. Update the website code to fetch blog content from Sanity
-3. Create blog documents in Sanity
+The website code is now connected to fetch blog posts from Sanity. You just need to:
+1. Create the `blogPost` schema in Sanity Studio
+2. Create blog documents in Sanity
 
 ### Step 1: Create Blog Post Schema in Sanity Studio
 
-In your Sanity Studio project, create a new file `schemas/blogPost.ts`:
+In your Sanity Studio project folder, create a new file `schemas/blogPost.js`:
 
-```typescript
-// schemas/blogPost.ts
+```javascript
+// schemas/blogPost.js
 export default {
   name: 'blogPost',
   title: 'Blog Post',
@@ -34,57 +32,29 @@ export default {
       name: 'id',
       title: 'Blog ID',
       type: 'string',
-      description: 'Unique identifier (1, 2, 3, 4 for existing blogs)',
-      validation: (Rule: any) => Rule.required()
+      description: 'Unique identifier (1, 2, 3, 4 for existing blogs, or any new number)',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'title',
       title: 'Title',
       type: 'string',
       description: 'The main title of the blog post',
-      validation: (Rule: any) => Rule.required()
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'text',
       description: 'Short description shown in blog card (max 200 characters)',
-      validation: (Rule: any) => Rule.max(200)
-    },
-    {
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-          styles: [
-            { title: 'Normal', value: 'normal' },
-            { title: 'H2', value: 'h2' },
-            { title: 'H3', value: 'h3' },
-            { title: 'H4', value: 'h4' },
-            { title: 'Quote', value: 'blockquote' }
-          ],
-          marks: {
-            decorators: [
-              { title: 'Strong', value: 'strong' },
-              { title: 'Emphasis', value: 'em' },
-              { title: 'Underline', value: 'underline' }
-            ]
-          }
-        },
-        {
-          type: 'image',
-          options: { hotspot: true }
-        }
-      ],
-      description: 'The full blog post content'
+      validation: (Rule) => Rule.max(200)
     },
     {
       name: 'htmlContent',
-      title: 'HTML Content (Alternative)',
+      title: 'HTML Content',
       type: 'text',
-      description: 'Full HTML content of the blog post (use this for complex formatting)'
+      description: 'Full HTML content of the blog post (copy from examples below)',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'author',
@@ -95,8 +65,8 @@ export default {
     {
       name: 'date',
       title: 'Publication Date',
-      type: 'date',
-      description: 'When the blog was published'
+      type: 'string',
+      description: 'Display date (e.g., "January 20, 2024")'
     },
     {
       name: 'category',
@@ -123,20 +93,20 @@ export default {
       title: 'Featured Image',
       type: 'image',
       options: { hotspot: true },
-      description: 'Main image for the blog post'
+      description: 'Optional main image for the blog post'
     }
   ],
   preview: {
     select: {
       title: 'title',
       category: 'category',
-      date: 'date'
+      id: 'id'
     },
-    prepare(selection: any) {
-      const { title, category, date } = selection;
+    prepare(selection) {
+      const { title, category, id } = selection;
       return {
         title: title,
-        subtitle: `${category} | ${date}`
+        subtitle: `ID: ${id} | ${category}`
       };
     }
   }
@@ -145,15 +115,22 @@ export default {
 
 ### Step 2: Add to Schema Index
 
-In your Sanity Studio's `schemas/index.ts`, add:
+In your Sanity Studio's `schemas/index.js` file, add:
 
-```typescript
-import blogPost from './blogPost';
+```javascript
+import blogPost from './blogPost'
 
 export const schemaTypes = [
-  // ... existing schemas
+  // ... your existing schemas
   blogPost,
-];
+]
+```
+
+### Step 3: Restart Sanity Studio
+
+After adding the schema, restart Sanity Studio:
+```bash
+npm run dev
 ```
 
 ---

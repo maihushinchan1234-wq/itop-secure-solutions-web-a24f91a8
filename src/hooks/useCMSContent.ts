@@ -93,6 +93,18 @@ export interface BlogItem {
   category: string;
 }
 
+export interface BlogPostContent {
+  id: string;
+  title: string;
+  excerpt: string;
+  htmlContent: string;
+  author: string;
+  date: string;
+  category: string;
+  readTime: string;
+  image?: string;
+}
+
 export interface BlogsSectionContent {
   sectionTitle: string;
   sectionDescription: string;
@@ -456,6 +468,15 @@ export function useBlogs() {
   ];
 
   return useCMSContent<BlogItem[]>(queries.blogs, fallback);
+}
+
+export function useBlogPost(blogId: string) {
+  const fallback: BlogPostContent | null = null;
+  
+  return useCMSContent<BlogPostContent | null>(
+    queries.blogPost(blogId),
+    fallback
+  );
 }
 
 // ============ SERVICE PAGE HOOKS ============
