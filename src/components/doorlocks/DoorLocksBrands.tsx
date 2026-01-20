@@ -21,30 +21,26 @@ export const DoorLocksBrands = () => {
           {content.brands.map((brand, index) => (
             <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-4">
-  <div className="bg-white p-3 rounded-lg shadow-sm mr-4 flex items-center justify-center min-w-[120px]">
-    <img 
-      src={brand.logo} 
-      alt={`${brand.name} logo`}
-      className="max-h-12 max-w-[120px] object-contain"
-      loading="lazy"
-      onError={(e) => {
-        e.currentTarget.style.display = 'none';
-        const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
-        if (nextElement) {
-          nextElement.style.display = 'block';
-        }
-      }}
-    />
-    <span className="text-lg font-semibold text-gray-700 hidden">
-      {brand.name}
-    </span>
-  </div>
-
-  <h3 className="text-xl font-semibold text-gray-800 whitespace-normal break-normal">
-    {brand.name}
-  </h3>
-</div>
-
+                
+                <div className="bg-white p-3 rounded-lg shadow-sm mr-4">
+                  <img 
+                    src={brand.logo} 
+                    alt={`${brand.name} logo`}
+                    className="h-8 w-auto"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (nextElement) {
+                        nextElement.style.display = 'block';
+                      }
+                    }}
+                  />
+                  <span 
+                    className="text-lg font-semibold text-gray-700 hidden"
+                  >
+                    {brand.name}
+                  </span>
+                </div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   {brand.name}
                 </h3>
