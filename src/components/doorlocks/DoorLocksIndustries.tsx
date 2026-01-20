@@ -45,21 +45,19 @@ export const DoorLocksIndustries = () => {
             const Icon = iconMap[industry.icon] || Building;
 
             return (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
-              >
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {industry.image ? (
-                    <img
-                      src={industry.image}
-                      alt={industry.title}
-                      className="h-8 w-8 object-contain"
-                    />
-                  ) : (
-                    <Icon className="h-8 w-8 text-blue-600" />
-                  )}
-                </div>
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                {industry.image && (
+                  <img 
+                    src={industry.image} 
+                    alt={industry.title}
+                    className="w-full h-48 object-cover"
+                  />
+                )}
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                      <Icon className="h-6 w-6 text-blue-600" />
+                    </div>
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   {industry.title}
