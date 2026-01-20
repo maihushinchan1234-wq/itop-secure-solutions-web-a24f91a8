@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { usePageIndustries } from '@/hooks/useCMSContent';
 
-// ✅ Icon mapping (string → component)
+// 🔹 Map icon name (string from Sanity) → Lucide component
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Home,
   Building,
@@ -22,7 +22,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 export const DoorLocksIndustries = () => {
   const { content } = usePageIndustries('doorlocks');
 
-  // ✅ Extract CMS industries safely
+  // 🔹 Safe extraction
   const industries = Array.isArray(content?.industries)
     ? content.industries
     : [];
@@ -50,7 +50,15 @@ export const DoorLocksIndustries = () => {
                 className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
               >
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="h-8 w-8 text-blue-600" />
+                  {industry.image ? (
+                    <img
+                      src={industry.image}
+                      alt={industry.title}
+                      className="h-8 w-8 object-contain"
+                    />
+                  ) : (
+                    <Icon className="h-8 w-8 text-blue-600" />
+                  )}
                 </div>
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
