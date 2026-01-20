@@ -2,39 +2,10 @@
 import React from 'react';
 import { Home, Building, School, Hotel, Factory, ShoppingBag } from 'lucide-react';
 
-export const DoorLocksIndustries = () => {
-  const industries = [
-    {
-      icon: Home,
-      title: "Residential",
-      description: "Home security locks for main doors, bedrooms, and interior spaces"
-    },
-    {
-      icon: Building,
-      title: "Commercial",
-      description: "Office access control, meeting room locks, and security systems"
-    },
-    {
-      icon: School,
-      title: "Educational",
-      description: "School and college security with keycard and biometric access"
-    },
-    {
-      icon: Hotel,
-      title: "Hospitality",
-      description: "Hotel room locks, RFID systems, and guest access management"
-    },
-    {
-      icon: Factory,
-      title: "Industrial",
-      description: "High-security locks for industrial facilities and restricted areas"
-    },
-    {
-      icon: ShoppingBag,
-      title: "Retail",
-      description: "Store security, cash room locks, and retail access control"
-    }
-  ];
+import { usePageTypes } from '@/hooks/useCMSContent';
+
+export const DoorLocksTypes = () => {
+  const { content } = usePageTypes('doorlocks');
 
   return (
     <section id="industries" className="py-16 bg-gray-50">
