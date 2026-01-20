@@ -37,37 +37,33 @@ const BlogPost = () => {
 
           <div class="bg-green-50 p-6 rounded-lg border border-green-200">
             <h3 class="text-xl font-semibold text-green-800 mb-4">Key Benefits That Change Your Life:</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <strong class="text-green-800">Remote Access Control:</strong>
-                  <span class="text-green-700 block mt-1">Lock or unlock your door from anywhere in the world using your smartphone. Perfect for letting in family members, service providers, or guests when you're not home.</span>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <strong class="text-green-800">Temporary Access Codes:</strong>
-                  <span class="text-green-700 block mt-1">Create one-time or time-limited access codes for housekeepers, repair technicians, Airbnb guests, or family members. Codes expire automatically for maximum security.</span>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <strong class="text-green-800">Real-Time Security Alerts:</strong>
-                  <span class="text-green-700 block mt-1">Receive instant notifications on your phone if someone attempts to tamper with the lock, enters the wrong code multiple times, or if the door is left unlocked.</span>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <CheckCircle class="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <strong class="text-green-800">Complete Activity Tracking:</strong>
-                  <span class="text-green-700 block mt-1">Monitor who enters and exits your home with detailed logs showing timestamps. Perfect for keeping track of children, elderly family members, or service providers.</span>
-                </div>
-              </div>
+            <div class="text-green-700 space-y-3 leading-relaxed">
+              <p>
+                <strong class="text-green-800">Remote Access Control:</strong>
+                Lock or unlock your door from anywhere in the world using your smartphone.
+                Perfect for letting in family members, service providers, or guests when you're not home.
+              </p>
+
+              <p>
+                <strong class="text-green-800">Temporary Access Codes:</strong>
+                Create one-time or time-limited access codes for housekeepers, repair technicians,
+                Airbnb guests, or family members. Codes expire automatically for maximum security.
+              </p>
+
+              <p>
+                <strong class="text-green-800">Real-Time Security Alerts:</strong>
+                Receive instant notifications on your phone if someone attempts to tamper with the lock,
+                enters the wrong code multiple times, or if the door is left unlocked.
+              </p>
+
+              <p>
+                <strong class="text-green-800">Complete Activity Tracking:</strong>
+                Monitor who enters and exits your home with detailed logs showing timestamps.
+                Perfect for keeping track of children, elderly family members, or service providers.
+              </p>
             </div>
           </div>
+
 
           <div class="space-y-6">
             <h3 class="text-xl font-semibold text-gray-800">🏆 Top Smart Lock Brands We Install & Service:</h3>
@@ -738,25 +734,13 @@ const BlogPost = () => {
           <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
             <h3 class="text-xl font-semibold text-blue-800 mb-4">🏆 Why Choose iTOP Services for Your Printer Needs?</h3>
             <ul class="text-blue-700 space-y-2 leading-relaxed">
-              <li>
-                <strong>Expert Guidance:</strong> 8+ years helping customers choose the right printer
-    </li>
-    <li>
-      <strong>Best Prices:</strong> Competitive rates with genuine products
-    </li>
-    <li>
-      <strong>Complete Service:</strong> Sales, installation, repair, and AMC
-    </li>
-    <li>
-      <strong>Quick Response:</strong> Same-day service across Delhi NCR
-    </li>
-    <li>
-      <strong>All Brands:</strong> HP, Canon, Epson, Brother, Samsung, Xerox
-    </li>
-    <li>
-      <strong>Warranty Support:</strong> Extended warranty and service guarantees
-    </li>
-  </ul>
+              <li><strong>Expert Guidance:</strong> 8+ years helping customers choose the right printer </li>
+              <li><strong>Best Prices:</strong> Competitive rates with genuine products</li>
+              <li><strong>Complete Service:</strong> Sales, installation, repair, and AMC</li>
+              <li><strong>Quick Response:</strong> Same-day service across Delhi NCR</li>
+              <li><strong>All Brands:</strong> HP, Canon, Epson, Brother, Samsung, Xerox</li>
+              <li><strong>Warranty Support:</strong> Extended warranty and service guarantees</li>
+            </ul>
             
             <div class="bg-white p-4 rounded-lg border border-blue-200">
               <p class="text-blue-800 font-semibold mb-2">🚀 Ready to Find Your Perfect Printer?</p>
