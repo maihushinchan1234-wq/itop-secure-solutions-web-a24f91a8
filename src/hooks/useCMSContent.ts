@@ -728,24 +728,24 @@ export function usePageIndustries(pageType: string) {
       sectionTitle: "Industries We Serve",
       sectionDescription: "Customized lock solutions for every sector",
       industries: [
-        { icon: "Home", title: "Residential", description: "Home security locks for main doors, bedrooms, and interior spaces" },
-        { icon: "Building", title: "Commercial", description: "Office access control, meeting room locks, and security systems" },
-        { icon: "School", title: "Educational", description: "School and college security with keycard and biometric access" },
-        { icon: "Hotel", title: "Hospitality", description: "Hotel room locks, RFID systems, and guest access management" },
-        { icon: "Factory", title: "Industrial", description: "High-security locks for industrial facilities and restricted areas" },
-        { icon: "ShoppingBag", title: "Retail", description: "Store security, cash room locks, and retail access control" }
+        { icon: "Home", title: "Residential", description: "Home security locks for main doors, bedrooms, and interior spaces" , image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" },
+        { icon: "Building", title: "Commercial", description: "Office access control, meeting room locks, and security systems", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "School", title: "Educational", description: "School and college security with keycard and biometric access", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Hotel", title: "Hospitality", description: "Hotel room locks, RFID systems, and guest access management", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Factory", title: "Industrial", description: "High-security locks for industrial facilities and restricted areas" , image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" },
+        { icon: "ShoppingBag", title: "Retail", description: "Store security, cash room locks, and retail access control", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  }
       ]
     },
     firealarms: {
       sectionTitle: "Industries We Serve",
       sectionDescription: "Customized fire safety solutions for every sector",
       industries: [
-        { icon: "Home", title: "Residential", description: "Home fire safety systems for apartments, villas, and residential complexes" },
-        { icon: "Building", title: "Commercial", description: "Office buildings, corporate complexes, and commercial establishments" },
-        { icon: "School", title: "Educational", description: "Schools, colleges, and educational institutions with compliance requirements" },
-        { icon: "Hotel", title: "Hospitality", description: "Hotels, restaurants, and hospitality venues with guest safety priorities" },
-        { icon: "Factory", title: "Industrial", description: "Manufacturing plants, warehouses, and industrial facilities" },
-        { icon: "ShoppingBag", title: "Retail", description: "Shopping malls, retail stores, and commercial complexes" }
+        { icon: "Home", title: "Residential", description: "Home fire safety systems for apartments, villas, and residential complexes", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Building", title: "Commercial", description: "Office buildings, corporate complexes, and commercial establishments", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "School", title: "Educational", description: "Schools, colleges, and educational institutions with compliance requirements", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Hotel", title: "Hospitality", description: "Hotels, restaurants, and hospitality venues with guest safety priorities", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "Factory", title: "Industrial", description: "Manufacturing plants, warehouses, and industrial facilities", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
+        { icon: "ShoppingBag", title: "Retail", description: "Shopping malls, retail stores, and commercial complexes", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  }
       ]
     }
   };
