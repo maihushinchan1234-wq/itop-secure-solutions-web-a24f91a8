@@ -250,8 +250,8 @@ export function useCMSContent<T>(
         const data = await fetchContent<T>(query);
         
         if (isMounted) {
-          if (data) {
-            setContent(data);
+          if (data !== null && data !== undefined) {
+            setContent(prev => ({ ...prev, ...data }));
           }
           setIsLoading(false);
         }
