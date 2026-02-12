@@ -167,41 +167,22 @@ export const Header = ({ isSidebarOpen, setIsSidebarOpen }: HeaderProps) => {
       case '/fire-alarms':
         return (
           <>
-            <Button 
-              variant="ghost" 
-              onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              Services
-            </Button>
-            <Button 
-              variant="ghost" 
-              onClick={() => scrollToSection('types')}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              Types
-            </Button>
-            <Button 
-              variant="ghost" 
-              onClick={() => scrollToSection('brands')}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              Brands
-            </Button>
-            <Button 
-              variant="ghost" 
-              onClick={() => scrollToSection('industries')}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              Industries
-            </Button>
-            <Button 
-              variant="ghost" 
-              onClick={() => scrollToSection('faqs')}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              FAQs
-            </Button>
+            <Button variant="ghost" onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600">Services</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('types')} className="text-gray-700 hover:text-blue-600">Types</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('brands')} className="text-gray-700 hover:text-blue-600">Brands</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('industries')} className="text-gray-700 hover:text-blue-600">Industries</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('faqs')} className="text-gray-700 hover:text-blue-600">FAQs</Button>
+          </>
+        );
+
+      case '/home-automation':
+        return (
+          <>
+            <Button variant="ghost" onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600">Services</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('types')} className="text-gray-700 hover:text-blue-600">Types</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('brands')} className="text-gray-700 hover:text-blue-600">Brands</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('industries')} className="text-gray-700 hover:text-blue-600">Industries</Button>
+            <Button variant="ghost" onClick={() => scrollToSection('faqs')} className="text-gray-700 hover:text-blue-600">FAQs</Button>
           </>
         );
       
