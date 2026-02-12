@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Printer, Shield, Eye, Flame, ArrowRight } from 'lucide-react';
+import { Printer, Shield, Eye, Flame, Home, ArrowRight } from 'lucide-react';
 import { useHomeServices } from '@/hooks/useCMSContent';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -20,6 +20,7 @@ export const ServicesSection = () => {
     if (title.toLowerCase().includes('cctv')) return Eye;
     if (title.toLowerCase().includes('door') || title.toLowerCase().includes('lock')) return Shield;
     if (title.toLowerCase().includes('fire')) return Flame;
+    if (title.toLowerCase().includes('home') || title.toLowerCase().includes('automation') || title.toLowerCase().includes('smart')) return Home;
     return Printer;
   };
 

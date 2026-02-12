@@ -8,6 +8,7 @@ import PrintersPage from "./pages/PrintersPage";
 import CCTVPage from "./pages/CCTVPage";
 import DoorLocksPage from "./pages/DoorLocksPage";
 import FireAlarmsPage from "./pages/FireAlarmsPage";
+import HomeAutomationPage from "./pages/HomeAutomationPage";
 import FeedbackPage from "./pages/FeedbackPage";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/cctv" element={<CCTVPage />} />
           <Route path="/door-locks" element={<DoorLocksPage />} />
           <Route path="/fire-alarms" element={<FireAlarmsPage />} />
+          <Route path="/home-automation" element={<HomeAutomationPage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />

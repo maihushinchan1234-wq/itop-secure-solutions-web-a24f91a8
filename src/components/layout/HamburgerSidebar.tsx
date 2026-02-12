@@ -7,7 +7,8 @@ import {
   Printer, 
   Shield, 
   Eye, 
-  Flame, 
+  Flame,
+  Lightbulb,
   MapPin, 
   Star,
   Settings,
@@ -230,6 +231,13 @@ export const HamburgerSidebar = ({ isOpen, onToggle }: HamburgerSidebarProps) =>
                     >
                       <Flame className="h-4 w-4 text-gray-500" />
                       <span>Fire Alarms</span>
+                    </button>
+                    <button
+                      onClick={() => handleNavigation('/home-automation', 'services')}
+                      className="w-full flex items-center gap-3 p-2 text-left hover:bg-blue-50 rounded-md transition-colors text-sm"
+                    >
+                      <Lightbulb className="h-4 w-4 text-gray-500" />
+                      <span>Home Automation</span>
                     </button>
                   </div>
                 )}

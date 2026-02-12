@@ -319,6 +319,12 @@ export function useHomeServices() {
         description: "Smoke/heat/CO sensors, regulatory compliance, emergency support, AMCs.",
         path: "/fire-alarms",
         colorClass: "bg-red-100 text-red-800"
+      },
+      {
+        title: "Smart Home Automation",
+        description: "Smart lighting, automated curtains, voice control, mood scenes & centralized home management.",
+        path: "/home-automation",
+        colorClass: "bg-purple-100 text-purple-800"
       }
     ]
   };
@@ -399,7 +405,8 @@ export function useFooterContent() {
       { label: "Printers", path: "/printers" },
       { label: "CCTV Systems", path: "/cctv" },
       { label: "Door Locks", path: "/door-locks" },
-      { label: "Fire Alarms", path: "/fire-alarms" }
+      { label: "Fire Alarms", path: "/fire-alarms" },
+      { label: "Home Automation", path: "/home-automation" }
     ],
     contactInfo: {
       phone: "+91 9990820830",
@@ -510,6 +517,13 @@ export function usePageHero(pageType: string) {
       description: "Professional fire alarm system installation and maintenance for homes, offices, and industrial facilities. Advanced detection systems with 24/7 monitoring and emergency response capabilities.",
       primaryButtonText: "Schedule Fire Safety Audit",
       secondaryButtonText: "Explore Alarm Types"
+    },
+    homeautomation: {
+      title: "Smart Home Automation & Interior Technology",
+      subtitle: "Transform Your Living Space with Intelligent Automation – Control Everything from Your Fingertips",
+      description: "Professional smart home automation solutions for residential and commercial spaces. From voice-controlled lighting to automated curtains, we create intelligent environments that enhance comfort, aesthetics, and energy efficiency.",
+      primaryButtonText: "Get Free Consultation",
+      secondaryButtonText: "Explore Solutions"
     }
   };
 
@@ -574,6 +588,21 @@ export function usePageServices(pageType: string) {
         { icon: "Wrench", title: "Emergency Repairs", description: "24/7 urgent response for faulty alarms, disconnected sensors, and control panel issues." },
         { icon: "Bell", title: "Smart Monitoring", description: "Advanced monitoring systems with mobile alerts, incident logs, and integration with building management systems." }
       ]
+    },
+    homeautomation: {
+      sectionTitle: "Smart Home Automation Solutions We Offer",
+      sectionDescription: "End-to-end intelligent automation services for modern homes and offices",
+      services: [
+        { icon: "Lightbulb", title: "Smart Lighting Systems", description: "Voice-controlled and app-managed lighting with Alexa, Google Assistant, and Siri integration. Create custom scenes, schedules, and energy-saving profiles.", features: ["Voice control via Alexa/Google", "App-based scheduling", "Color & brightness control", "Energy monitoring"] },
+        { icon: "Blinds", title: "Automated Curtains & Blinds", description: "Motorized curtain and blind systems that open and close on schedule, by voice, or via mobile app. Perfect for privacy, light control, and energy savings.", features: ["Timer-based automation", "Voice & app control", "Sunlight sensor integration", "Silent motor operation"] },
+        { icon: "ToggleLeft", title: "Smart Switches & Dimmers", description: "Replace traditional switches with Wi-Fi or Zigbee-enabled smart switches and dimmers. Control lights and fans from anywhere, set schedules, and monitor usage.", features: ["Retrofit-friendly installation", "Touch & remote control", "Dimming capabilities", "No hub required options"] },
+        { icon: "Mic", title: "Voice-Controlled Appliances", description: "Connect TVs, ACs, fans, geysers, and more to voice assistants. Automate routines like 'Good Morning' or 'Movie Time' with a single command.", features: ["Alexa & Google integration", "Custom voice routines", "Multi-device control", "IR blaster support"] },
+        { icon: "Palette", title: "Mood Lighting & Scene Setup", description: "Create immersive lighting scenes for dining, relaxation, parties, and work. Combine color temperatures, brightness levels, and music sync for the perfect ambiance.", features: ["RGB & warm white options", "One-tap scene activation", "Music-reactive lighting", "Preset & custom scenes"] },
+        { icon: "Zap", title: "Energy-Efficient Smart Lighting", description: "LED smart bulbs and strips that reduce power consumption by up to 80%. Monitor energy usage in real-time and optimize with intelligent automation schedules.", features: ["LED technology", "Usage analytics", "Auto-off scheduling", "Motion-based activation"] },
+        { icon: "Smartphone", title: "Centralized Mobile Control", description: "Manage your entire smart home from a single app on your phone or tablet. Control lights, curtains, AC, security, and more — even when you're away from home.", features: ["Single app dashboard", "Remote access anywhere", "Guest access controls", "Real-time notifications"] },
+        { icon: "Cpu", title: "Future-Ready & Scalable Systems", description: "Our automation setups are designed to grow with your needs. Start with basic lighting and expand to full-home automation including security, HVAC, and entertainment.", features: ["Modular architecture", "Easy expansion", "Multi-protocol support", "Regular software updates"] },
+        { icon: "ArrowRight", title: "Interior Tech Enhancement", description: "Integrate technology seamlessly into your interiors with concealed wiring, in-wall touch panels, and smart mirrors. Elevate both aesthetics and functionality.", features: ["Concealed smart panels", "In-wall touch controls", "Smart mirror displays", "Aesthetic cable management"] }
+      ]
     }
   };
 
@@ -627,6 +656,18 @@ export function usePageTypes(pageType: string) {
         { title: "Heat Detectors", description: "Fixed temperature and rate-of-rise heat detectors for kitchen and industrial areas", image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop" },
         { title: "Control Panels", description: "Addressable and conventional fire alarm control panels with zone management", image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop" },
         { title: "Notification Devices", description: "Sirens, strobes, and voice evacuation systems for emergency alerts", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" }
+      ]
+    },
+    homeautomation: {
+      sectionTitle: "Types of Smart Home Systems We Offer",
+      sectionDescription: "Choose the right automation setup for your lifestyle and budget",
+      types: [
+        { title: "Smart Lighting Systems", description: "Wi-Fi and Zigbee-enabled bulbs, strips, and panels that you control via voice or app. Set schedules, scenes, and automate based on time or motion.", image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop", features: ["Voice assistant compatible", "RGB & tunable white", "App scheduling", "Energy monitoring"], bestFor: "Living rooms, bedrooms, restaurants, hotels" },
+        { title: "Motorized Curtains & Blinds", description: "Automated window treatments with silent motors that respond to voice commands, mobile apps, and sunlight sensors.", image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop", features: ["Silent motor operation", "Sunlight sensor support", "Timer automation", "Remote control"], bestFor: "Bedrooms, living rooms, conference rooms" },
+        { title: "Smart Switches & Panels", description: "Touch-enabled and Wi-Fi smart switches that replace traditional switches. Control fans, lights, and appliances remotely.", image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop", features: ["Retrofit-friendly", "Touch & app control", "Scene support", "No hub needed"], bestFor: "Any room, offices, retail spaces" },
+        { title: "Voice Control Hubs", description: "Centralized voice assistants (Alexa Echo, Google Nest) that tie your entire smart home together for seamless control.", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop", features: ["Multi-device control", "Custom routines", "Intercom features", "Music & entertainment"], bestFor: "Whole-home automation, families, offices" },
+        { title: "Smart AC & Climate Control", description: "IR blasters and smart thermostats that make any AC or heater intelligent. Schedule, automate, and control from anywhere.", image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop", features: ["Works with existing ACs", "Temperature scheduling", "Geo-fencing support", "Energy savings"], bestFor: "Homes, server rooms, offices" },
+        { title: "Whole-Home Automation Packages", description: "Complete smart home packages including lighting, curtains, security, climate, and entertainment — all managed from one app.", image: "https://images.unsplash.com/photo-1573883430120-6e6d5dc38cd5?w=400&h=300&fit=crop", features: ["All-in-one solution", "Single app control", "Professional installation", "Scalable design"], bestFor: "New homes, villas, luxury apartments, offices" }
       ]
     }
   };
@@ -689,6 +730,21 @@ export function usePageBrands(pageType: string) {
         { name: "Siemens", logo: "https://logos-world.net/wp-content/uploads/2020/07/Siemens-Logo.png", description: "Advanced fire safety technology and systems" },
         { name: "Edwards", logo: "https://www.edwardsfiresafety.com/images/logo.png", description: "Professional fire detection and notification systems" }
       ]
+    },
+    homeautomation: {
+      sectionTitle: "Brands We Work With",
+      sectionDescription: "Partnering with the best smart home technology brands for reliable automation",
+      brands: [
+        { name: "Amazon Alexa", logo: "https://logos-world.net/wp-content/uploads/2021/02/Amazon-Logo.png", description: "Voice-first smart home ecosystem with thousands of compatible devices", specialties: ["Echo devices", "Alexa Skills", "Smart home hub", "Routines & automations"] },
+        { name: "Google Nest", logo: "https://logos-world.net/wp-content/uploads/2020/04/Google-Logo.png", description: "Intelligent home automation with Google Assistant integration", specialties: ["Nest Hub", "Google Home", "Chromecast", "Smart displays"] },
+        { name: "Philips Hue", logo: "https://logos-world.net/wp-content/uploads/2020/07/Philips-Logo.png", description: "Premium smart lighting with unmatched color range and reliability", specialties: ["Smart bulbs", "Light strips", "Outdoor lights", "Hue Bridge"] },
+        { name: "Wipro Smart", logo: "https://logos-world.net/wp-content/uploads/2020/07/Wipro-Logo.png", description: "Affordable Indian smart home solutions for lighting and switches", specialties: ["Smart bulbs", "Smart switches", "Wi-Fi enabled", "Budget-friendly"] },
+        { name: "Syska Smart", logo: "https://www.syska.co.in/images/logo.png", description: "Smart LED and home automation products designed for Indian homes", specialties: ["Smart LEDs", "Wi-Fi plugs", "IR blasters", "App control"] },
+        { name: "Havells", logo: "https://logos-world.net/wp-content/uploads/2020/07/Havells-Logo.png", description: "Trusted Indian brand for smart switches and electrical solutions", specialties: ["Smart switches", "Modular panels", "Fan controls", "Energy monitoring"] }
+      ],
+      ctaTitle: "Want a customized solution?",
+      ctaDescription: "We work with many other brands and can design a custom smart home solution tailored to your needs and budget. Contact us for a free consultation.",
+      ctaButtonText: "Contact Us"
     }
   };
 
@@ -746,6 +802,18 @@ export function usePageIndustries(pageType: string) {
         { icon: "Hotel", title: "Hospitality", description: "Hotels, restaurants, and hospitality venues with guest safety priorities", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
         { icon: "Factory", title: "Industrial", description: "Manufacturing plants, warehouses, and industrial facilities", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  },
         { icon: "ShoppingBag", title: "Retail", description: "Shopping malls, retail stores, and commercial complexes", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"  }
+      ]
+    },
+    homeautomation: {
+      sectionTitle: "Who Benefits from Smart Home Automation",
+      sectionDescription: "Intelligent automation solutions designed for every type of space",
+      industries: [
+        { icon: "Home", title: "Residential Homes", description: "Transform your home into a smart living space with automated lighting, curtains, climate control, and voice-activated appliances for ultimate comfort.", solutions: ["Smart lighting setup", "Voice control integration", "Automated curtains", "Climate automation"], image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop" },
+        { icon: "Building", title: "Corporate Offices", description: "Boost productivity and reduce energy costs with automated lighting, smart conference rooms, and centralized building management.", solutions: ["Meeting room automation", "Energy management", "Access integration", "Smart lighting zones"], image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" },
+        { icon: "Hotel", title: "Hotels & Hospitality", description: "Elevate guest experience with in-room automation, mood lighting, automated curtains, and voice-controlled amenities.", solutions: ["Guest room automation", "Mood lighting scenes", "Voice concierge", "Energy optimization"], image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop" },
+        { icon: "ShoppingBag", title: "Retail Spaces", description: "Create engaging shopping experiences with dynamic lighting, automated displays, and smart ambiance control.", solutions: ["Dynamic lighting", "Smart displays", "Ambiance control", "Energy savings"], image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop" },
+        { icon: "GraduationCap", title: "Educational Institutions", description: "Smart classrooms with automated lighting, projector integration, and climate control for better learning environments.", solutions: ["Smart classrooms", "Automated AV systems", "Climate scheduling", "Energy monitoring"], image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop" },
+        { icon: "Heart", title: "Healthcare Facilities", description: "Patient-centric automation with adjustable lighting, climate control, and nurse call integration for improved care.", solutions: ["Patient room automation", "Nurse call integration", "Ambient lighting", "Climate management"], image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop" }
       ]
     }
   };
@@ -857,6 +925,28 @@ export function usePageFAQs(pageType: string) {
       ctaButtons: [
         { text: "Schedule Fire Safety Audit", action: "contact", variant: "primary" },
         { text: "Emergency Consultation", action: "whatsapp", variant: "secondary" }
+      ]
+    },
+    homeautomation: {
+      sectionTitle: "Smart Home Automation FAQs",
+      sectionDescription: "Everything you need to know about transforming your space with intelligent automation",
+      faqs: [
+        { question: "What is smart home automation?", answer: "Smart home automation uses connected devices and sensors to automate lighting, curtains, climate, and appliances. You can control everything via voice commands, mobile apps, or automatic schedules for enhanced comfort and energy savings." },
+        { question: "Do I need to rewire my home for smart automation?", answer: "No! Most of our smart solutions are retrofit-friendly and work with your existing electrical setup. Wi-Fi and Zigbee-based devices simply replace your current switches, bulbs, or plugs without any rewiring." },
+        { question: "Which voice assistants do you support?", answer: "We support Amazon Alexa, Google Assistant, and Apple Siri (via HomeKit-compatible devices). You can choose based on your preference, and we'll configure everything for seamless voice control." },
+        { question: "Can I control my smart home when I'm away?", answer: "Yes! All our smart home systems are cloud-connected, allowing you to control lights, curtains, AC, and more from anywhere in the world using your smartphone app." },
+        { question: "Is smart home automation expensive?", answer: "Not at all! We offer solutions starting from basic smart lighting (₹2,000–5,000) to full-home automation packages. Our team designs cost-effective setups based on your budget and priorities." },
+        { question: "What if my internet goes down?", answer: "Most smart devices continue to function locally even without internet. You can still use physical switches and buttons. Internet is only needed for remote access and voice assistant features." },
+        { question: "Can I start small and expand later?", answer: "Absolutely! Our systems are designed to be modular and scalable. You can start with smart lighting in one room and gradually add curtains, climate control, and security automation as needed." },
+        { question: "Do smart devices consume a lot of electricity?", answer: "Smart devices actually help reduce electricity consumption. Smart LEDs use up to 80% less power, and automation features like auto-off schedules and motion sensors prevent energy waste." },
+        { question: "How long does installation take?", answer: "Basic smart lighting setup takes 2-3 hours. A complete room automation takes about a day. Full-home automation projects typically take 2-3 days depending on the scope." },
+        { question: "Do you provide after-sales support and warranty?", answer: "Yes! All our installations come with a comprehensive warranty. We provide ongoing support, troubleshooting, and system updates to ensure your smart home runs smoothly." }
+      ],
+      ctaTitle: "Ready to Make Your Home Smarter?",
+      ctaDescription: "Get a free consultation and customized smart home automation plan. Our experts will design the perfect solution for your lifestyle and budget.",
+      ctaButtons: [
+        { text: "Get Free Consultation", action: "contact", variant: "primary" },
+        { text: "WhatsApp Us", action: "https://wa.me/919990820830", variant: "secondary" }
       ]
     }
   };
