@@ -334,16 +334,16 @@ export function useHomeServices() {
 
 export function useAboutContent() {
   const fallback: AboutContent = {
-    title: "About iTOP Services",
-    description: "Since 2008, iTOP Services has been Delhi NCR's trusted partner for comprehensive technology solutions. What started as a small printer repair service has grown into a full-service technology and security company, serving hundreds of satisfied customers across residential and commercial sectors.",
-    secondaryDescription: "We specialize in printer services, CCTV surveillance systems, smart door locks, and fire alarm installations. Our team of certified technicians brings years of experience and expertise to every project, ensuring reliable solutions that keep your technology running smoothly and your property secure.",
+    title: "About iTopIndia Services",
+    description: "Since 2008, iTopIndia Services has been Delhi NCR's trusted partner for comprehensive technology solutions. What started as a small printer repair service has grown into a full-service technology and security company, serving hundreds of satisfied customers across residential and commercial sectors.",
+    secondaryDescription: "We specialize in printer services, CCTV surveillance systems, smart door locks, fire alarm installations, and smart home automation. Our team of certified technicians brings years of experience and expertise to every project, ensuring reliable solutions that keep your technology running smoothly and your property secure.",
     achievements: [
       { icon: "Users", number: "500+", label: "Happy Customers", description: "Homes and businesses served across Delhi NCR" },
       { icon: "Clock", number: "16+", label: "Years Experience", description: "Established in 2008, serving the community" },
       { icon: "Award", number: "50+", label: "Brands Supported", description: "Wide range of technology brands and models" },
       { icon: "CheckCircle", number: "24/7", label: "Support Available", description: "Emergency services and customer support" }
     ],
-    whyChooseTitle: "Why Choose iTOP Services?",
+    whyChooseTitle: "Why Choose iTopIndia Services?",
     features: [
       "Certified and experienced technicians",
       "Same-day service for most repairs",
@@ -353,7 +353,7 @@ export function useAboutContent() {
       "Free consultation and site surveys"
     ],
     commitmentTitle: "Our Commitment",
-    commitmentDescription: "At iTOP Services, we understand that technology is essential to your daily life and business operations. That's why we're committed to providing fast, reliable, and cost-effective solutions that minimize downtime and maximize your peace of mind.",
+    commitmentDescription: "At iTopIndia Services, we understand that technology is essential to your daily life and business operations. That's why we're committed to providing fast, reliable, and cost-effective solutions that minimize downtime and maximize your peace of mind.",
     secondaryCommitmentDescription: "Whether you need emergency printer repair, want to upgrade to a smart security system, or require regular maintenance for your office equipment, we're here to help with professional service and genuine care for our customers' satisfaction."
   };
 
@@ -362,7 +362,7 @@ export function useAboutContent() {
 
 export function useContactContent() {
   const fallback: ContactContent = {
-    title: "Contact iTOP Services",
+    title: "Contact iTopIndia Services",
     subtitle: "🚀 Get Expert Help Now",
     description: "Ready to transform your tech experience? Our certified experts are standing by to provide immediate assistance, professional consultations, and comprehensive solutions tailored to your needs.",
     phones: ["+91 9990820830"],
@@ -392,7 +392,7 @@ export function useContactContent() {
 
 export function useFooterContent() {
   const fallback: FooterContent = {
-    companyName: "iTOP Services",
+    companyName: "iTopIndia Services",
     tagline: "Tech Solutions",
     description: "Your trusted partner for technology and security solutions since 2008.",
     quickLinks: [
@@ -413,7 +413,7 @@ export function useFooterContent() {
       email: "sachidanand@live.in",
       address: "224, B1, DDA Flats, Loknayak Puram, New Delhi 110041"
     },
-    copyright: "© 2024 iTOP Services. All rights reserved. | Serving Delhi NCR since 2008",
+    copyright: "© 2024 iTopIndia Services. All rights reserved. | Serving Delhi NCR since 2008",
     socialLinks: {
       facebook: "#",
       instagram: "#",

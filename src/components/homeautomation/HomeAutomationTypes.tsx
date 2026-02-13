@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { usePageTypes } from '@/hooks/useCMSContent';
+import { Cpu } from 'lucide-react';
 
 export const HomeAutomationTypes = () => {
   const { content } = usePageTypes('homeautomation');
@@ -9,6 +10,10 @@ export const HomeAutomationTypes = () => {
     <section id="types" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 text-indigo-600 text-sm font-medium mb-3">
+            <Cpu className="h-4 w-4" />
+            <span>Smart Solutions</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {content.sectionTitle}
           </h2>
@@ -19,7 +24,7 @@ export const HomeAutomationTypes = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {content.types.map((type, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-indigo-50">
               <img 
                 src={type.image} 
                 alt={type.title}
@@ -39,7 +44,7 @@ export const HomeAutomationTypes = () => {
                     <ul className="space-y-1">
                       {type.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                          <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"></div>
                           {feature}
                         </li>
                       ))}
@@ -47,7 +52,7 @@ export const HomeAutomationTypes = () => {
                   </div>
                 )}
                 {type.bestFor && (
-                  <div className="bg-indigo-50 p-3 rounded-lg">
+                  <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-3 rounded-lg border border-indigo-100">
                     <span className="text-sm font-medium text-indigo-800">Best for: </span>
                     <span className="text-sm text-indigo-700">{type.bestFor}</span>
                   </div>
