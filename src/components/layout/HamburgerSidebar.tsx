@@ -114,7 +114,7 @@ export const HamburgerSidebar = ({ isOpen, onToggle }: HamburgerSidebarProps) =>
         <div className="h-full overflow-y-auto pt-20 pb-4">
           <div className="px-6 mb-6">
             <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              iTOP Services
+              iTopIndia Services
             </h2>
             <p className="text-sm text-gray-600 mt-1">Complete Tech Solutions</p>
           </div>
