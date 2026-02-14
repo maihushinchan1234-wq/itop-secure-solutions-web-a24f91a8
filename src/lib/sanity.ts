@@ -330,7 +330,7 @@ export const queries = {
 // Fetch content from Sanity
 export async function fetchContent<T>(query: string): Promise<T | null> {
   try {
-    const data = await sanityClient.fetch<T>(query);
+    const data = await sanityClient.fetch<T>(query,{},{cache: "no-store"});
     return data;
   } catch (error) {
     console.error('Error fetching from Sanity:', error);
