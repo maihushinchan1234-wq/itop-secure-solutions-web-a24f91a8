@@ -186,9 +186,9 @@ export const ContactSection = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Location</h3>
               <div className="rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.587!2d67.0611!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44dc8e4797!2s!5e0!3m2!1sen!2s!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3500.9541997194865!2d77.009248!3d28.661089999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM5JzM5LjkiTiA3N8KwMDAnMzMuMyJF!5e0!3m2!1sen!2sin!4v1771155402636!5m2!1sen!2sin"
                   width="100%"
-                  height="300"
+                  height="400"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
