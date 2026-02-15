@@ -180,6 +180,23 @@ export const ContactSection = () => {
                 Don't see your area? <a href={`tel:${content.phones[0]?.replace(/\s/g, '')}`} className="text-blue-600 hover:underline">Call us</a> - we might still be able to help!
               </p>
             </div>
+
+            {/* Google Map */}
+            <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Location</h3>
+              <div className="rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.587!2d67.0611!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44dc8e4797!2s!5e0!3m2!1sen!2s!4v1700000000000"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Our Location on Google Maps"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
 
